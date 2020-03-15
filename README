@@ -1,0 +1,18 @@
+A Infra funcionou! Foi criado uma maquina virtual, instalado o docker, feito a imagem a partir do GIT e a aplicação foi deployada.
+A infra é composta por um vagrantfile duas estruturas de pasta(.vagrant e configs) uma chave para conexao com a vmbox e um arquivo de log
+
+A ideia que tive foi a mesma que tive usando o terrform, criar uma infra que ja instalasse o docker, o git, clonar o git, criar a imagem docker-pets e executar a mesma.
+
+Passo a passo:
+* Criação de uma box com imagem ubuntu/bionic64
+* Criação da estrutura de portas com 1 ip fixo
+* Criação da vm dockerhost com a infraestrutura solicitada
+* Comandos para instalação do docker, git e criação da imagem
+
+Desafios encontrados:
+* Não conhecia nada de vagrant, sendo assim precisei fazer o treinamento da alura e reaproveitar alguns trechos de código para ganhar um pouco de tempo. 
+Mesmo assim, comecei ontem (14/03) por volta de 11h e estou finalizando hoje 15/03 por volta de 10:20
+* Tive muitos problemas com a instalação do docker, com o comando config.vm.provision "shell",inline: a principio ele funcionou para uma unica linha, perdi cerca de 1h tentando deixa-lo
+em outras linhas para deixar mais bonito o visual.
+* Após varias tentativas, optei por deixar tudo na mesma linha, não é a melhor opção mas funciona.
+
